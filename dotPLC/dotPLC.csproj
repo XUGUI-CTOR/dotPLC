@@ -19,22 +19,17 @@
     <Version>1.1.2</Version>
     <PackageReadmeFile></PackageReadmeFile>
     <PackageReleaseNotes>Change SelfTestCheckInterval value.</PackageReleaseNotes>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\dotPLC\dotPLC\dotPLC.xml</DocumentationFile>
+    <DocumentationFile>$(OutDir)dotPLC.xml</DocumentationFile>
     <WarningLevel>3</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="dotPLC.xml" />
     <None Remove="dotPLC32x32png.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\Dell Latitude 3540\OneDrive\Documents\My Code\SourceCode\dotPLC\dotPLC\dotPLC32x32png.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +45,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <DocFileItem Remove="dotPLC.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="dotPLC.xml" />
   </ItemGroup>
 
 </Project>
